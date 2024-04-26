@@ -2,6 +2,7 @@ project_root: /root/projects
 common_project_root: '{{project_root}}/common'
 openpbs_project_root: '{{project_root}}/openpbs'
 enroot_project_root: '{{project_root}}/enroot'
+cryosparc_project_root: '{{project_root}}/cryosparc'
 cc_queue_manager:
 cyclecloud_slurm_release: '{{slurm.cyclecloud_slurm_version | default("2.7.2")}}'
 slurm_version: '{{cc_slurm_version}}'

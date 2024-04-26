@@ -115,7 +115,13 @@
       state: directory
       mode: '0755'
     run_once : true
-
+  
+  - name: Create {{homedir_mountpoint}}/apps directory
+    file:
+      path: '{{homedir_mountpoint}}/apps'
+      state: directory
+      mode: '0755'
+    run_once : true
 
 - name: Generate SSH keys on logon if not exists
   hosts: ondemand, scheduler

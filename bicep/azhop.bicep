@@ -483,6 +483,8 @@ var config = {
     CycleCloud: ['9443', '5672']
     MySQL: ['3306', '33060']
     WinRM: ['5985', '5986']
+    // Applications: CryoSPARC
+    Applications: ['39000']
   }
 
   nsg_rules: {
@@ -654,6 +656,10 @@ var config = {
       // Outbound
       AllowSshDeployerOut         : ['510', 'Outbound', 'Allow', 'Tcp', 'Ssh', 'asg', 'asg-deployer', 'asg', 'asg-ssh']
       AllowSshDeployerPackerOut   : ['520', 'Outbound', 'Allow', 'Tcp', 'Ssh', 'asg', 'asg-deployer', 'subnet', 'admin']
+    }
+    cluster_apps: {
+      AllowApplicationsIn         : ['710', 'Inbound', 'Allow', 'All', 'Applications', 'asg', 'asg-ondemand', 'subnet', 'compute']
+      AllowApplicationsOut        : ['710', 'Outbound', 'Allow', 'All', 'Applications', 'asg', 'asg-ondemand', 'subnet', 'compute']
     }
   }
 }

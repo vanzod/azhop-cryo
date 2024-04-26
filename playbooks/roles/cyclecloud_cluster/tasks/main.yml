@@ -50,3 +50,5 @@
       args:
         chdir: '{{enroot_project_root}}'
 
+- name: Create application projects
+  include_tasks: apps.yml
